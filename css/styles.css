@@ -81,10 +81,16 @@ img { display: block; max-width: 100%; height: auto; }
   height: 4rem;
 }
 .navbar-brand {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
-  color: var(--gold);
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  height: clamp(2rem, 4vw, 3rem);
+  width: auto;
+  transition: transform 0.3s ease;
+}
+.nav-logo:hover {
+  transform: scale(1.05);
 }
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a {
@@ -273,7 +279,7 @@ img { display: block; max-width: 100%; height: auto; }
 @media (min-width: 768px) {
   .dishes-grid { grid-template-columns: repeat(3, 1fr); }
 }
-.dish-card { }
+/* .dish-card styling currently empty or handled by children */
 .dish-img-wrap {
   overflow: hidden;
   margin-bottom: 1.5rem;
@@ -377,10 +383,16 @@ img { display: block; max-width: 100%; height: auto; }
   .footer-grid { grid-template-columns: repeat(3, 1fr); }
 }
 .footer-brand {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--gold);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.footer-logo {
+  height: clamp(3rem, 6vw, 4.5rem);
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.footer-logo:hover {
+  opacity: 1;
 }
 .footer-heading {
   font-size: 0.75rem;
